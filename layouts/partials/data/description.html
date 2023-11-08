@@ -8,7 +8,7 @@
 
 {{ if .Description }}
     <!-- Page description exists -->
-    {{ $description = .Description }}
+    {{ $description = .Summary }}
 {{ else if .IsPage }}
     <!-- Use page summary -->
     {{ $description = .Summary }}

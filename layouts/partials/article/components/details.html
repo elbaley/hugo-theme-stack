@@ -16,9 +16,9 @@
             </a>
         </h2>
     
-        {{ with .Params.description }}
+        {{ with .Summary }}
         <h3 class="article-subtitle">
-            {{ . }}
+            {{ . | safeHTML}}
         </h3>
         {{ end }}
     </div>
@@ -32,7 +32,7 @@
             <div>
                 {{ partial "helper/icon" "date" }}
                 <time class="article-time--published">
-                    {{- .Date.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") -}}
+                    {{ .Date | time.Format ":date_medium" }}
                 </time>
             </div>
         {{ end }}

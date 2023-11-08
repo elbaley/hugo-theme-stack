@@ -6,7 +6,8 @@
 {{ with .Params.Keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
 
 {{- $title := partialCached "data/title" . .RelPermalink -}}
-<title>{{ $title }}</title>
+<!-- <title>{{ $title }}</title> -->
+<title>{{ if and (.Title) (not .IsHome) }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
 
 <link rel='canonical' href='{{ .Permalink }}'>
 

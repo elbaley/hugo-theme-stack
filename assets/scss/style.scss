@@ -26,3 +26,15 @@
 
 @import "general.scss";
 @import "custom.scss";
+
+/* https://github.com/lonekorean/gist-syntax-themes */
+@import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/d49b91b3/stylesheets/one-dark.css');
+
+.gist .blob-code-inner{
+  font-size:16px !important;
+}
+
+/* remove border on gist  */
+.article-content th, .article-content td{
+  border:none;
+}
